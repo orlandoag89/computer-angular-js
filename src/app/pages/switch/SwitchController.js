@@ -11,24 +11,33 @@ app.controller('SwitchController', function ($scope, ComputerService, $location)
     return $scope.status;
   };
 
-  $scope.toggleComputer = function () {
-    ComputerService.toggleComputer();
+  $scope.goFeatures = function () {
     $location.path('/features');
   };
 
   $scope.hdd = function () {
-    return $scope.validateString(ComputerService.getHdd(), 'Executor');
+    _stringReturnHdd = $scope.validateString(ComputerService.getHdd(), 'Executor');
+    ComputerService.setHdd(_stringReturnHdd);
+    return _stringReturnHdd;
   }
 
   $scope.processor = function () {
-    return $scope.validateString(ComputerService.getProcessor(), 'Sand Crawler')
+    _stringRaturnProcessor = $scope.validateString(ComputerService.getProcessor(), 'Sand Crawler');
+    ComputerService.setProcessor(_stringRaturnProcessor);
+    return _stringRaturnProcessor;
   }
 
   $scope.ram = function () {
-    return $scope.validateString(ComputerService.getRam(), 'Hutt');
+    _stringReturnRam = $scope.validateString(ComputerService.getRam(), 'Hutt');
+    ComputerService.setRam(_stringReturnRam);
+    return _stringReturnRam;
   }
 
+  /**
+   * Carga valores por defecto
+   */
   $scope.validateString = function (string, stringReturn) {
     return string === '' ? stringReturn : string;
   }
+
 }); 
