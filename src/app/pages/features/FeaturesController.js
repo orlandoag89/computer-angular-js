@@ -13,13 +13,16 @@ app.controller('FeaturesController', function ($scope, $location, ComputerServic
 
   HddService.success(function (data) {
     $scope.hdds = data.results;
+    $scope.hddSelected = $scope.hdds[0];
   });
 
   ProcessorsService.success(function (data) {
     $scope.processors = data.results;
+    $scope.processorSelected = $scope.processors[0];
   });
 
   RamService.success(function (data) {
     $scope.rams = data.results;
+    $scope.ramSelected = $scope.rams[0];
   });
 });
