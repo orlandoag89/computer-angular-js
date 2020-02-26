@@ -1,0 +1,118 @@
+:root {
+  --five-pixels: 5px;
+  --ten-pixels: 10px;
+}
+
+/* SWITCH */
+.switch {
+  background: #2EB8D7;
+  border: 2px solid rgba(0, 0, 0, .25);
+  padding: var(--ten-pixels);
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+}
+
+.switch .swt-elements {
+  background: white;
+  border: 1px solid black;
+  margin: var(--ten-pixels);
+  width: 98%;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.switch .swt-buttons {
+  width: 30%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.switch .swt-buttons button {
+  width: 40%;
+  padding: var(--ten-pixels);
+  background: #2ED783;
+  color: white;
+  border: 1.4px solid green;
+}
+
+.switch .swt-buttons button:hover {
+  background: green;
+  border: 1.4px solid #2ED783;
+  cursor: pointer;
+}
+
+.switch .swt-on, .swt-off {
+  width: 30px;
+  height: 30px;
+  border-radius: 187px;
+}
+
+.switch .swt-off {
+  border: 1px solid red;
+  background: tomato;
+}
+
+.switch .swt-on {
+  border: 1px solid green;
+  background: #2ED783;
+}
+
+.switch .swt-buttons .swt-btn-on:before {
+  content: 'ON';
+}
+
+.switch .swt-buttons .swt-btn-off:before {
+  content: 'OFF';
+}
+
+/* FEATURES */
+.features {
+  background: #7E2FA4;
+  padding: var(--ten-pixels);
+  border: 2px solid #5C0087;
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+}
+
+.features .feat-selects {
+  background: white;
+  border: 1.4px solid black;
+  padding: var(--ten-pixels);
+  margin: var(--five-pixels);
+  width: 98%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.features .feat-selects select {
+  width: 30%;
+  border-radius: var(--five-pixels);
+  padding: var(--five-pixels);
+  font-size: 1em;
+}
+
+.features .feat-selects select:focus {
+  outline: none;
+}
+
+.features .feat-btn-return {
+  background: #EABC1D;
+  border: 1.4px solid #CBA318;
+  color: white;
+  width: 20%;
+  padding: var(--ten-pixels);
+}
+
+.features .feat-btn-return:hover {
+  cursor: pointer;
+  background: #CBA318;
+  border: 1.4px solid #EABC1D;
+}

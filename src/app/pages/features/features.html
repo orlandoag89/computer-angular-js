@@ -1,0 +1,8 @@
+<div class="features">
+  <div class="feat-selects" ng-if="!status">
+    <select ng-model="$parent.hddSelected" ng-options="hdd.name for hdd in hdds track by hdds.name"></select>
+    <select ng-model="$parent.processorSelected" ng-options="processor.name for processor in processors"></select>
+    <select ng-model="$parent.ramSelected" ng-options="ram.name for ram in rams"></select>
+  </div>
+  <button class="feat-btn-return" ng-click="returnPath();">Finished</button>
+</div>

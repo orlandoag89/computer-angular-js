@@ -1,0 +1,13 @@
+<div class="switch">
+  <div ng-class="status ? 'swt-off': 'swt-on';"></div>
+  <div class="swt-elements">
+    <h2>hdd: {{hdd()}}</h2>
+    <h2>Procesador: {{processor()}}</h2>
+    <h2>RAM: {{ram()}}</h2>
+  </div>
+  <div class="swt-buttons">
+    <button ng-click="onOffComputer()" ng-class="status ? 'swt-btn-on' : 'swt-btn-off'"></button>
+    <button ng-click="toggleComputer()" ng-disabled="!status">SETTINGS</button>
+  </div>
+
+</div>

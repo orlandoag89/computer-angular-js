@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Computer</title>
+  <link rel="stylesheet" href="global.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+  <div ng-view></div>
+  <!-- Modules -->
+  <script src="app/app.js"></script>
+  <!-- Controllers -->
+  <script src="app/pages/switch/SwitchController.js"></script>
+  <script src="app/pages/features/FeaturesController.js"></script>
+  <!-- Services -->
+  <script src="app/services/ComputerService.js"></script>
+  <script src="app/services/HddService.js"></script>
+  <script src="app/services/ProcessorsService.js"></script>
+  <script src="app/services/RamService.js"></script>
+</body>
+
+</html>
