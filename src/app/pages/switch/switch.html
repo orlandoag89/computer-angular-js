@@ -1,9 +1,9 @@
 <div class="switch">
   <div ng-class="status ? 'swt-off': 'swt-on';"></div>
   <div class="swt-elements">
-    <h2>hdd: {{hdd()}}</h2>
-    <h2>Procesador: {{processor()}}</h2>
-    <h2>RAM: {{ram()}}</h2>
+    <h2>hdd: {{hdd().name}}</h2>
+    <h2>Procesador: {{processor().name}}</h2>
+    <h2>RAM: {{ram().name}}</h2>
   </div>
   <div class="swt-buttons">
     <button ng-click="onOffComputer()"
@@ -12,4 +12,36 @@
       ng-class="status ? 'swt-btn-settings-off' : 'swt-btn-settings-on'">SETTINGS</button>
   </div>
 
+  <section class="swt-sct-detail">
+    <div class="swt-sct-component">
+      <h1>Hdd</h1>
+      <ul>
+        <li>Name: {{hdd().name}}</li>
+        <li>Model: {{hdd().model}}</li>
+        <li>Manufacturer: {{hdd().manufacturer}}</li>
+        <li>Cost: {{hdd().cost_in_credits}}</li>
+        <li>Lenght: {{hdd().length}}</li>
+      </ul>
+    </div>
+    <div class="swt-sct-component">
+      <h1>Procesador</h1>
+      <ul>
+        <li>Name: {{processor().name}}</li>
+        <li>Model: {{processor().model}}</li>
+        <li>Manufacturer: {{processor().manufacturer}}</li>
+        <li>Cost: {{processor().cost_in_credits}}</li>
+        <li>Lenght: {{processor().length}}</li>
+      </ul>
+    </div>
+    <div class="swt-sct-component">
+      <h1>RAM</h1>
+      <ul>
+        <li>Name: {{ram().name}}</li>
+        <li>Model: {{ram().classification}}</li>
+        <li>Manufacturer: {{ram().designation}}</li>
+        <li>Cost: {{ram().average_lifespan}}</li>
+        <li>Lenght: {{ram().average_height}}</li>
+      </ul>
+    </div>
+  </section>
 </div>
